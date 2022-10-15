@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    color: red;
+    background-color: black;
+}
+
+/* CODE FOR HEADER */
+
+header{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #46244C;
+    color: white;
+    font-size: 4.5vw;
+}
+
+header:hover{
+    text-shadow: 1px 1px 5px goldenrod;
+}
+
+/* CODE FOR BODY */
+
+section{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    Background: Radial-Gradient(Circle, Rgb(3, 155, 229) 20%, Rgb(1, 51, 75) 120%);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid black;
+    height: 6vh;
+    max-width: 75vw;
+}
+
+/* Code For Custom Scroll Bar */
+#message-container::-webkit-scrollbar {
+    width: 1.3vw;
+}
+#message-container::-webkit-scrollbar-track {
+    border-left: 1px solid black;
+    background-color: cornflowerblue;
+} 
+#message-container::-webkit-scrollbar-thumb {
+    background: #763581;
+    border-left: 1px solid black;
+    border-radius: 1vw;
+}
+#message-container::-webkit-scrollbar-thumb:hover{
+    box-shadow: 2px 2px 9px inset;
+}
+
+#message-container{
+    outline: 2px solid black;
+    width: 75vw;
+    height: 70vh;
+    margin: 2vh 0;
+    overflow-y: auto;
+    background-color: lightcoral;
+}
+
+#message-container > div {
+    font-size: 2.2vw;
+    padding: 2vh 1vw;
+}
+
+.userCon{
+    font-family: 'Silkscreen', cursive;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.title{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.left{
+    color: darkblue;
+}
+
+.right{
+    color: darkviolet;
+    text-align: right;
+}
+
+.mes{
+    width: 20px;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color:black;
+}
+
+
+/* Code For Sending Area */
+
+
+#input-message{
+    width: 50vw;
+    outline: none;
+    background: none;
+    height: 100%;
+    padding: 1vh 1vw;
+    font-family: cursive;
+    border: none;
+}
+
+#send-button , .emoji{
+    height: 100%;
+    width: 10vw;
+    outline: none;
+    background-color: lightcoral;
+    font-size: 2vw;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+}
+
+#send-button:hover , .emoji:hover{
+    background-color: rgb(240, 85, 85);
+}
+
+#send-button:focus-within , .emoji:focus-within{
+    box-shadow: 2px 2px 9px inset;
+}
+
+/* Code for Emoji Section */
+
+.emoji{
+    height: 100%;
+}
+
+#emoji-section{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    height: 20vh;
+    width: 20vw;
+    z-index: 1;
+    background-color: whitesmoke;
+    overflow-y: auto;
+    bottom: 9vh;
+    left: 14.9vw;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.emoS{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2vh 0.2vw;
+    height: max-content;
+    font-size: 2.4vw;
+    border: 1px solid black;
+    cursor: pointer;
+}
